@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Porto;
+  src: url('../font/Porto 400.ttf');
+}
+
+body {
+  padding-top: 127px;
+}
+nav {
+  font-family: "Roboto";
+  background: #FFF9C4;
+}
+nav a{
+  color: #283593 !important;
+}
+nav a:hover {
+  color: #004 !important;
+}
+nav .btn-outline-primary {
+  border-color: #283593 !important;
+}
+nav .btn-outline-primary:hover {
+  background: #283593;
+  color: #FFF9C4 !important;
+}
+.img {
+  font-family: Porto;
+}
+nav .navbar-toggler {
+  border-color: #283593 !important;
+  outline: #283593 !important;
+}
+nav .navbar-toggler:hover, nav .navbar-toggler:focus {
+  transform: scale(1.1);
+}
+
+.box-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05),
+    0 4px 8px 0 rgba(0, 0, 0, .05);
+}
+
+
+
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+
+  .fixed-top {
+    position: relative;
+  }
+}

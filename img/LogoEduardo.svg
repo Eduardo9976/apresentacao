@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="204" height="93" viewBox="0 0 204 93">
+  <g id="LogoEduardo" transform="translate(-289 -84)">
+    <g id="Retângulo_1" data-name="Retângulo 1" transform="translate(289 84)" fill="#FFF9C4" stroke="#283593" stroke-width="1">
+      <rect width="80" height="73" stroke="none"/>
+      <rect x="0.5" y="0.5" width="79" height="72" fill="none"/>
+    </g>
+    <path id="Caminho_1" data-name="Caminho 1" d="M582.248,191" transform="translate(-274 -107)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Linha_1" data-name="Linha 1" y1="63" x2="16" transform="translate(289.5 84.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <line id="Linha_2" data-name="Linha 2" x2="23" y2="66" transform="translate(289.5 90.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <line id="Linha_3" data-name="Linha 3" y1="26" x2="31" transform="translate(289.5 84.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <line id="Linha_4" data-name="Linha 4" x2="70" y2="25" transform="translate(289.5 131.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <line id="Linha_5" data-name="Linha 5" x1="68" y2="25" transform="translate(300.5 131.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <text id="Eduardo_Fernandes" data-name="Eduardo
+Fernandes" transform="translate(378 104)" fill="#283593" font-size="18" font-family="Porto, 'Porto 400'"><tspan x="0" y="15">Eduardo</tspan><tspan x="0" y="34">Fernandes</tspan></text>
+    <line id="Linha_6" data-name="Linha 6" x2="89" transform="translate(381.5 147.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <line id="Linha_7" data-name="Linha 7" x2="92" transform="translate(378.5 99.5)" fill="none" stroke="#283593" stroke-width="1"/>
+    <text id="Desenvolvedor_" data-name="Desenvolvedor
+" transform="translate(381 153)" fill="#283593" font-size="10" font-family="Porto, 'Porto 400'"><tspan x="0" y="8">Desenvolvedor</tspan></text>
+    <text id="Web_" data-name="Web
+" transform="translate(448 163)" fill="#283593" font-size="10" font-family="Porto, 'Porto 400'"><tspan x="0" y="8">Web</tspan></text>
+  </g>
+</svg>
