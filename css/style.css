@@ -12,6 +12,7 @@
 body {
   background: rgba(0, 0, 0, 0.7);
   font-family: "Roboto";
+  overflow-x: hidden;
 }
 
 /* fecha geral */
@@ -106,9 +107,10 @@ nav .navbar-toggler:hover {
   align-items: center;
 }
 
+
 .box-parallax span {
-  font-size: 1.4em;
-  font-weight: bold;
+  display: block;
+  font-size: 1.2em;
 }
 
 .box-parallax span:nth-child(3) {
