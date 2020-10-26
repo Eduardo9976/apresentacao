@@ -85,7 +85,7 @@ nav .navbar-toggler:hover {
   background-size: cover;
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 960px) {
   .parallax {
     background-attachment: scroll;
   }
@@ -95,6 +95,7 @@ nav .navbar-toggler:hover {
 
 /* conteudo parallax */
 .box-container {
+  background: url('./../img/icons/back.svg') center repeat-x;
   border-top: 2px solid #03CDD7;
   border-bottom: 2px solid #03CDD7;
 }
@@ -165,3 +166,15 @@ nav .navbar-toggler:hover {
 }
 
 /* fecha conteudo parallax */
+.tituloTecnologias {
+  padding: 10px 0;
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+}
+.tecnologias {
+  background: rgba(255, 255, 255, .1);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
