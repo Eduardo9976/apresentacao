@@ -1,6 +1,10 @@
 @import "stylesVariables";
 
 /* geral  */
+* {
+  padding: 0;
+  margin: 0;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -27,46 +31,107 @@ h1 {
 
 /* navegação */
 nav {
+  width: 100vw;
+  @include flex(c, wrap);
+  align-items: center;
+  max-width: 100%;
+  padding: $spaceDefault !important;
+  box-shadow: $colorBoxShadowC;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  div {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    animation: bounce 1s alternate forwards ease-in-out;
+    transition: ease-in-out 1s;
+    @include d(m) {
+      flex-direction: column;
+      background: $colorBackgroundE;
+      display: none;
+      position: absolute;
+      width: 100vw;
+      z-index: 10;
+      top: 100px;
+      left: 0;
+      box-shadow: $colorBoxShadowC;
+    }
+  }
+  li + li {
+    margin-left: 5px;
+    @include d(m) {
+      margin-left: 0;
+    }
+    
+  }
   li {
-    height: 60px;
+    @include d(m) {
+      padding: 12px;
+    }
   }
   a {
-    color: $white !important;
-    font-size: em(18);
-    transition: all 0.4s ease-in-out;
+    padding: $spaceDefault;
+    text-decoration: none !important;
+    color: $white;
+    transition: all .3s;
     &:hover {
-      color: $myBlue !important;
       border-bottom: $border;
+      color:$myBlue;
+    }
+    @include d(m) {
+      width: 100vw;
     }
   }
-  .btn-outline-primary {
+  .Mmain {
     background: $myBlue;
-    border: $border !important;
+    border: $border;
+    border-radius: 4px;
+    transition: all .5s;
     &:hover {
+      transform: scale(1.1);
       background: transparent;
-      transform: scale(1.1);
-      color: $colorBackgroundE !important;
+      color: $white
     }
   }
-  .navbar-toggler {
-    border-color: $white !important;
+  .fa-bars {
+    width: 54px;
+    padding: $spaceDefault;
+    font-size: 1.6em;
+    border-radius: 4px;
     background: $myBlue;
-    transition: all 1s;
-    &:hover {
-      transform: scale(1.1);
+    color: $white;
+    border: 1px solid $white;
+    text-align: center;
+    visibility: hidden;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+    @include d(m) {
+      visibility: visible;
     }
   }
-  .navbar-brand:hover {
-    border: none;
+  .active {
+    display: flex;
+  }
+  .barActive {
+    transform: rotate(90deg);
   }
   @include d(m) {
-    .fixed-top {
-      position: relative;
-    }
-    .navbar-nav {
-      background: rgb(51, 51, 51);
-      padding: 0 $spaceDefault;
-    }
+    position: relative;
+    background: url("./../img/icons/back.svg") center repeat-x;
+  }
+}
+
+
+@keyframes bounce {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0%);
   }
 }
 /* fecha navegacao */
@@ -171,6 +236,7 @@ nav {
   @include d(m) {
     img {
       margin: 0 auto;
+      width: 100%;
     }
   }
   dt {
