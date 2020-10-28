@@ -165,7 +165,8 @@ nav {
     justify-content: space-between;
   }
   img {
-    max-width: 300px;
+    max-width: 280px;
+    height: auto;
   }
   @include d(m) {
     img {

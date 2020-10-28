@@ -115,7 +115,7 @@ $fonte-2: 'Red Hat Display', sans-serif;
   }
 
   @else if $dispositivo==m {
-      @media only screen and (max-width: 767px) {
+      @media (max-width: 767px) {
           @content;
       }
   }

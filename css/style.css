@@ -3,6 +3,7 @@
   max-width: 1290px;
   margin: 0 auto
 }
+
 .box-shadow {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05),
     0 4px 8px 0 rgba(0, 0, 0, .05);
@@ -175,9 +176,11 @@ nav .navbar-toggler:hover {
   background: rgba(255, 255, 255, .1);
   color: #fff;
 }
+
 #tecnologias {
-  padding:0 10px;
+  padding: 0 10px;
 }
+
 .tecnologias {
   background: rgba(255, 255, 255, .1);
   display: flex;
@@ -185,39 +188,47 @@ nav .navbar-toggler:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
+
 #contatos {
-  background: url('./../img/icons/back.svg') rgba(0, 0, 0, .7); center repeat-x;
+  background: url('./../img/icons/back.svg') rgba(0, 0, 0, .7) center repeat-x;
   border-top: 2px solid #FFF;
   border-bottom: 2px solid #FFF;
   max-width: 1290px;
-  padding:20px 10px;
+  padding: 20px 10px;
   margin: 0 auto;
   display: flex;
   /* justify-content: center;  */
 }
+
 @media only screen and (max-device-width: 615px) {
- #contatos {
-   flex-direction: column;
- } 
- #contatos img {
-   margin: 0 auto;
- }
+  #contatos {
+    flex-direction: column;
+  }
+
+  #contatos img {
+    margin: 0 auto;
+  }
 }
+
 #contatos h1 {
   padding-left: 0;
 }
-#contatos dl  {
+
+#contatos dl {
   width: 70%;
   min-width: 280px;
   align-self: flex-start;
 }
+
 #contatos dt {
   color: #fff;
   font-size: 1.6em;
 }
+
 #contatos dd {
   margin-left: 20px;
 }
+
 #contatos img {
   max-width: 300px;
 }
@@ -228,6 +239,7 @@ nav .navbar-toggler:hover {
   text-decoration: none;
   font-size: 1.4em;
 }
+
 footer {
   text-align: center;
   color: #FFF;
