@@ -109,7 +109,7 @@ $fonte-2: 'Red Hat Display', sans-serif;
 //Media-queries
 @mixin d($dispositivo) {
   @if $dispositivo==t {
-      @media only screen and (min-width: 768px) and (max-width: 959px) {
+      @media (max-width: 959px) {
           @content;
       }
   }

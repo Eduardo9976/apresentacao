@@ -104,17 +104,6 @@
   </div>
   <!-- fecha contatos   -->
 
-  <script>
-    const bar = document.querySelector(".fa-bars");
-    bar.addEventListener('click', () => {
-        bar.classList.toggle("barActive");
-        bar.nextElementSibling.classList.toggle("active");
-        bar.nextElementSibling.addEventListener('click', () => {
-            bar.classList.remove("barActive");
-            bar.nextElementSibling.classList.remove("active");
-        })
-    })
-  </script> 
-  
+  <script type="module" src="./js/script.js"></script>
 </body>
 </html>
