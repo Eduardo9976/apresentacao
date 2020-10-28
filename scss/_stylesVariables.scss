@@ -1,0 +1,122 @@
+$myBlue: #03CDD7 ;
+$white: #fff;
+$colorBackgroundE: rgba(0, 0, 0, .8);
+$colorBackgroundC: rgba(0, 0, 0, .4);
+$colorBoxShadowE: 3px 4px 4px 2px rgba(0, 0, 0, .2),
+4px 6px 8px 2px rgba(0, 0, 0, .4);
+$colorBoxShadowC: 0 2px 4px 0 rgba(0, 0, 0, .05),
+0 4px 8px 0 rgba(0, 0, 0, .05);
+$border: 2px solid $myBlue;
+$borderWhite: 2px solid #FFF;
+$spaceDefault: 10px;
+$spaceSections: 80px;
+
+
+$fonte-1: 'Open Sans', sans-serif;
+$fonte-2: 'Red Hat Display', sans-serif;
+
+
+@function em($pixel, $contexto: 16) {
+  @return $pixel / $contexto+em;
+}
+
+@mixin container {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+@mixin flex($position, $wrap:nowrap) {
+  display: flex;
+
+  @if $position==s {
+      justify-content: flex-start;
+  }
+
+  @else if $position==c {
+      justify-content: center;
+  }
+
+  @else if $position==e {
+      justify-content: flex-end;
+  }
+
+  flex-wrap: $wrap;
+}
+
+
+
+@mixin tipo-1($size, $color: $fontColor1) {
+  font-family: $fonte-1;
+  color: $color;
+
+  @if $size==14 {
+    font-size: em(14);
+    line-height: em(30, 14);
+  }
+
+  @else if $size==16 {
+      font-size: em(16);
+      line-height: em(30);
+  }
+
+  @else if $size==18 {
+      font-size: em(18);
+      line-height: em(30, 18);
+  }
+
+  @else if $size==24 {
+      font-size: em(24);
+      line-height: em(30, 24);
+  }
+
+  @else if $size==28 {
+      font-size: em(28);
+      line-height: em(30, 28);
+  }
+}
+
+@mixin tipo-2($size, $color: $fontColor1) {
+  font-family: $fonte-2;
+  color: $color;
+
+  @if $size==14 {
+      font-size: em(14);
+      line-height: em(30, 14);
+  }
+
+  @else if $size==16 {
+      font-size: em(16);
+      line-height: em(30);
+  }
+  @else if $size==18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+
+  @else if $size==24 {
+      font-size: em(24);
+      line-height: em(30, 24);
+  }
+
+  @else if $size==28 {
+      font-size: em(28);
+      line-height: em(30, 28);
+  }
+}
+
+//Media-queries
+@mixin d($dispositivo) {
+  @if $dispositivo==t {
+      @media only screen and (min-width: 768px) and (max-width: 959px) {
+          @content;
+      }
+  }
+
+  @else if $dispositivo==m {
+      @media only screen and (max-width: 767px) {
+          @content;
+      }
+  }
+}

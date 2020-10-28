@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Red+Hat+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Eduardo Fernandes</title>
 </head>
 <body>
   <!-- começa navegação -->
   <nav class="navbar navbar-expand-md navbar-light  fixed-top py-2 box-shadow">
-    <a href="index.html" class="navbar-brand"> <img src="./img/LogoEduardo.svg" class="img" alt="Logo Eduardo"> </a>
+    <a href="index.html" class="navbar-brand"> <img src="./img/LogoEduardo.png" class="img" alt="Logo Eduardo"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,7 +21,7 @@
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Serviços <span class="sr-only">(página atual)</span></a>
+          <a class="nav-link" href="#">Serviços</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#tecnologias" >Tecnologias </a>
@@ -36,58 +34,66 @@
   </nav>
   <!-- termina navegação -->
 
-  <section>
-    <!-- conteudo parallax -->
-    <div class="parallax">
-      <div class="box-parallax">
-        <div class="box-main animate__animated animate__zoomInUp">
-          <img src="./img/local/eduardo.svg" alt="foto Eduardo" class="sociais-main animate__animated animate__backInLeft animate__delay-1s">
-          <div>
-            <span class="animate__animated animate__backInRight animate__delay-2s">< Seja bem vindo, eu sou</span>
-            <h1 class="animate__animated animate__backInRight animate__delay-1s">Eduardo Fernandes</h1>
-            <span class="animate__animated animate__backInLeft animate__delay-2s" >Desenvolvedor Web /> </span>
-          </div>
-          <div class="box-sociais">
-            <p class="animate__animated animate__backInRight animate__delay-1s">Desenvolvimento de sistemas Web, Desenvolvimento de sites responsivos,
-              e Montagem de Landing Pages, Para saber mais entre em <a href="#">entre em contato.</a></p>
-              <div class="sociais-main animate__animated animate__backInLeft animate__delay-2s">
-                <a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href=" https://api.whatsapp.com/send?phone=5511992623645" target="_blank" ><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/eduardo_fernandes75/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:eduardo_2407@me.com"><i class="far fa-envelope"></i></a>
-              </div>
-          </div>
+
+  <!-- conteudo parallax -->
+  <div class="parallax">
+    <div class="box-parallax">
+      <div class="box-main animate__animated animate__zoomInUp">
+        <img src="./img/local/eduardo.svg" alt="foto Eduardo" class="sociais-main animate__animated animate__backInLeft animate__delay-1s">
+        <div>
+          <p class="animate__animated animate__backInRight animate__delay-2s">< Seja bem vindo, eu sou</p>
+          <h1 class="animate__animated animate__backInRight animate__delay-1s">Eduardo Fernandes</h1>
+          <p class="animate__animated animate__backInLeft animate__delay-2s" >Desenvolvedor Web /> </p>
+        </div>
+        <div class="box-sociais">
+          <p class="animate__animated animate__backInRight animate__delay-1s">Desenvolvimento de sistemas Web, Desenvolvimento de sites responsivos,
+            e Montagem de Landing Pages, Para saber mais entre em <a href="#contatos">entre em contato.</a></p>
+            <div class="sociais-main animate__animated animate__backInLeft animate__delay-2s">
+              <a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href=" https://api.whatsapp.com/send?phone=5511992623645" target="_blank" ><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/eduardo_fernandes75/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:eduardo_2407@me.com"><i class="far fa-envelope"></i></a>
+            </div>
         </div>
       </div>
     </div>
-     <!-- fecha conteudo parallax -->
+  </div>
 
-    <div class="container box-container" style="height:1000px;">
-      <p class="animate__animated animate__bounce">teste</p>
-    This div is just here to enable scrolling.
-    Tip: Try to remove the background-attachment property to remove the scrolling effect.
-    </div>
+    <!-- fecha conteudo parallax -->
 
-    <div class="parallax">
-      <div id="tecnologias">
-        <h1 class="container tituloTecnologias">Tecnologias</h1>
-        <div class="container tecnologias">
-          <img src="./img/icons/bootstrap.png" alt="logo bootstrap" class="animate__animated animate__bounceInDown animate__delay-1s">
-          <img src="./img/icons/css3.png" alt="logo css" class="animate__animated animate__bounceInDown animate__delay-1s">
-          <img src="./img/icons/express.png" alt="logo express" class="animate__animated animate__bounceInDown animate__delay-1s">
-          <img src="./img/icons/graphql.png" alt="logo graphql" class="animate__animated animate__bounceInDown animate__delay-2s">
-          <img src="./img/icons/html5.png" alt="logo html" class="animate__animated animate__bounceInDown animate__delay-2s">
-          <img src="./img/icons/javascript.png" alt="logo javascript" class="animate__animated animate__bounceInDown animate__delay-2s">
-          <img src="./img/icons/jest.png" alt="logo jest" class="animate__animated animate__bounceInDown animate__delay-3s">
-          <img src="./img/icons/nodejs.png" alt="logo node" class="animate__animated animate__bounceInDown animate__delay-3s">
-          <img src="./img/icons/sass.png" alt="logo sass" class="animate__animated animate__bounceInDown animate__delay-3s">
-          <img src="./img/icons/vue.png" alt="logo vue" class="animate__animated animate__bounceInDown animate__delay-4s">
-          <img src="./img/icons/vuetify.png" alt="logo vuetify" class="animate__animated animate__bounceInDown animate__delay-4s">
-        </div>
+  <div class="box-container" style="height:1000px;">
+    <p class="animate__animated animate__bounce">teste</p>
+  This div is just here to enable scrolling.
+  Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  </div>
+
+  <div class="parallax">
+    <div id="tecnologias">
+      <h1> Tecnologias</h1>
+      <p>Com os acessórios certos você evita desperdícios e garante os melhores resultados!</p>
+      <p>E com esse pensamento de entregar serviços de qualidade e sempre com os melhores resultados, em meus trabalhos costumos usar as seguintes tecnologias para o BACK-END e o FRONT-END. </p>
+      <div>
+        <img src="./img/icons/bootstrap.png" alt="logo bootstrap" class="animate__animated animate__bounceInDown animate__delay-1s">
+        <img src="./img/icons/css3.png" alt="logo css" class="animate__animated animate__bounceInDown animate__delay-1s">
+        <img src="./img/icons/express.png" alt="logo express" class="animate__animated animate__bounceInDown animate__delay-1s">
+        <img src="./img/icons/graphql.png" alt="logo graphql" class="animate__animated animate__bounceInDown animate__delay-2s">
+        <img src="./img/icons/html5.png" alt="logo html" class="animate__animated animate__bounceInDown animate__delay-2s">
+        <img src="./img/icons/javascript.png" alt="logo javascript" class="animate__animated animate__bounceInDown animate__delay-2s">
+        <img src="./img/icons/jest.png" alt="logo jest" class="animate__animated animate__bounceInDown animate__delay-3s">
+        <img src="./img/icons/nodejs.png" alt="logo node" class="animate__animated animate__bounceInDown animate__delay-3s">
+        <img src="./img/icons/sass.png" alt="logo sass" class="animate__animated animate__bounceInDown animate__delay-3s">
+        <img src="./img/icons/vue.png" alt="logo vue" class="animate__animated animate__bounceInDown animate__delay-4s">
+        <img src="./img/icons/vuetify.png" alt="logo vuetify" class="animate__animated animate__bounceInDown animate__delay-4s">
       </div>
-      <div id="contatos">
+    </div>
+      
+    <div id="contatos">
+      <h1>Contatos</h1>
+      <p>Dúvidas?</p>
+      <p>Se você gostaria de obter maiores informações sobre meus serviços, precisa de detalhes ou tem dúvidas sobre qual é a melhor alternativa para sua empresa, não hesite em entrar em contato, estou disponível para atende-lo o mais breve possível!</p>
+      <p>Entre em contato diretamente comigo e garanta uma parceria de confiança e sucesso.</p>
+      <div>
         <dl>
-          <h1 class="tituloTecnologias">Contatos</h1>
           <dt> <i class="fab fa-linkedin-in"></i> Linkedin:</dt>
           <dd> <a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank"> eduardo-fernandes </a> </dd>
           <dt> <i class="fab fa-whatsapp"></i> Whatsapp:</dt>
@@ -97,17 +103,22 @@
           <dt> <i class="far fa-envelope"></i> Email: </dt>
           <dd> <a href="mailto:eduardo_2407@me.com"> eduardo_2407@me.com </a> </dd>
         </dl>
-        <img src="./img/icons/FotoEu2x.png" alt="">
-      </div>      
-      <footer>
-        <div>
-          <p>©Eduardo Fernandes 2020</p>
-      </footer>
-    </div>
+        <img src="./img/icons/FotoEu2x.png" alt="foto Eduardo">
+      </div>
+    </div>   
 
-  </section>
+    <footer>
+      <div>
+        <p>©Eduardo Fernandes 2020</p>
+    </footer>
 
-  <script  type="text/javascript" src="./js/bootstrap.js"></script>
-  <script  type="text/javascript" src="./js/app.js"></script>
+  </div>
+    
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </body>
 </html>
