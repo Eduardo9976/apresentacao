@@ -6,24 +6,30 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .container {
   max-width: 1290px;
   margin: 0 auto;
 }
+
 .box-shadow {
   box-shadow: $colorBoxShadowC;
 }
+
 body {
   background: $colorBackgroundE;
   font-family: $fonte-1;
   overflow-x: hidden !important;
 }
+
 p {
   @include tipo-1(18, $white);
 }
+
 h1 {
   @include tipo-2(26, $white);
 }
@@ -42,11 +48,13 @@ nav {
   top: 0px;
   left: 0px;
   z-index: 100;
+
   ul {
     list-style: none;
     display: flex;
     animation: bounce 1s alternate forwards ease-in-out;
     transition: ease-in-out 1s;
+
     @include d(t) {
       flex-direction: column;
       background: $colorBackgroundE;
@@ -59,39 +67,47 @@ nav {
       box-shadow: $colorBoxShadowC;
     }
   }
-  li + li {
+
+  li+li {
     margin-left: 5px;
+
     @include d(t) {
       margin-left: 0;
     }
-    
+
   }
+
   li {
     @include d(t) {
       padding: 12px;
     }
   }
+
   a {
     padding: $spaceDefault;
     text-decoration: none !important;
     color: $white;
     transition: all .3s;
+
     &:hover {
       border-bottom: $border;
-      color:$myBlue;
+      color: $myBlue;
     }
   }
+
   .Mmain {
     background: $myBlue;
     border: $border;
     border-radius: 4px;
     transition: all .5s;
+
     &:hover {
       transform: scale(1.1);
       background: transparent;
       color: $white
     }
   }
+
   .fa-bars {
     width: 54px;
     padding: $spaceDefault;
@@ -104,16 +120,20 @@ nav {
     visibility: hidden;
     cursor: pointer;
     transition: ease-in-out 1s;
+
     @include d(t) {
       visibility: visible;
     }
   }
+
   .active {
     display: flex;
   }
+
   .barActive {
     transform: rotate(90deg);
   }
+
   @include d(t) {
     position: relative;
     background: url("./../img/icons/back.svg") center repeat-x;
@@ -123,12 +143,14 @@ nav {
 
 @keyframes bounce {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
+
   100% {
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
+
 /* fecha navegacao */
 
 /*parallax */
@@ -171,6 +193,7 @@ nav {
   padding: $spaceDefault;
   border-radius: 4px;
   box-shadow: $colorBoxShadowE;
+
   div {
     margin: $spaceDefault;
   }
@@ -179,6 +202,7 @@ nav {
 .box-sociais {
   padding-top: $spaceDefault;
   width: 100%;
+
   a {
     color: $myBlue;
     border-bottom: $border;
@@ -190,11 +214,13 @@ nav {
   border: none;
   color: $white;
   font-size: em(26);
+
   &:hover {
     color: $myBlue;
   }
 }
-.sociais-main a + a {
+
+.sociais-main a+a {
   margin-left: $spaceDefault;
 }
 
@@ -204,6 +230,7 @@ nav {
 .box-container {
   @include container;
 }
+
 // fecha servicos
 
 // abre tecnologias
@@ -211,64 +238,79 @@ nav {
   @include container;
   background: $colorBackgroundE;
   padding: $spaceSections $spaceDefault;
+
   div {
     visibility: hidden;
     @include flex(c, wrap);
+
     img {
       margin: 5px;
       visibility: hidden;
     }
   }
+
   h1 {
     visibility: hidden;
   }
+
   p {
     visibility: hidden;
   }
 }
+
 // fecha tecnologias
 // abre contatos
 .bgContatos {
   @include container;
   background: url("./../img/icons/back.svg") $colorBackgroundE center repeat-x;
 }
+
 #contatos {
   @include container;
   padding: $spaceSections $spaceDefault;
   border-top: $borderWhite;
   border-bottom: $borderWhite;
   visibility: hidden;
+
   div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   img {
     max-width: 280px;
     height: auto;
+
     @include d(m) {
       margin: 0 auto;
       max-width: 100%;
     }
   }
+
   dl {
     padding: 10px 0px;
   }
+
   dt {
     color: $white;
     @include tipo-2(28, $white);
   }
+
   dd {
     margin-left: 20px;
   }
+
   a {
     text-decoration: none;
     @include tipo-1(24, $white);
+
     &:hover {
       color: $myBlue;
     }
   }
 }
+
 // fecha contatos
 footer {
   @include container;
