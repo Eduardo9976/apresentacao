@@ -11,7 +11,7 @@ export default class Visibility {
         if (this.element.getBoundingClientRect().y < mid) {
           this.children.forEach((child) => {
             child.style.visibility = "visible";
-            child.classList.add("animate__animated", "animate__backInRight");
+            child.classList.add("animate__animated", "animate__backInLeft");
             // child.classList.add("animate__bounceInDown")
           });
           if (this.secondElement) {
