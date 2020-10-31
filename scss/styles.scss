@@ -35,6 +35,11 @@ h1 {
   @include tipo-2(26, $white);
 }
 
+h3 {
+  @include tipo-2(24, $myBlue);
+}
+
+
 /* fecha geral */
 
 /* navegação */
@@ -173,6 +178,103 @@ nav {
 
 /* fecha parallax */
 
+// abre servicos
+#servicos {
+  padding-top: $spaceTopTitle;
+  padding-bottom: $spaceSections;
+  visibility: hidden;
+}
+
+.descriptions {
+  background: $colorBackgroundC;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 1px 1px 0px 2px rgba(0, 0, 0, 0.2);
+  padding: $spaceDefault;
+  border-radius: 4px;
+}
+
+.sites,
+.system {
+  @include flex(c, wrap);
+  align-items: center;
+
+  @include d(m) {
+    flex-direction: column;
+  }
+
+  div {
+    flex: 2 1 280px;
+
+    @include d(m) {
+      flex: 1;
+    }
+  }
+
+  img {
+    max-width: 280px;
+
+    @include d(m) {
+      order: 2;
+    }
+  }
+
+  dl {
+    background: $colorBackgroundC;
+    margin-top: $spaceDefault;
+    padding: 0 $spaceDefault;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 1px 1px 0px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  dt {
+    @include tipo-2(24, $myBlue);
+    padding: $spaceDefault 0;
+  }
+
+  dt::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: $myBlue;
+  }
+
+  dd {
+    @include tipo-1(18, $white);
+    padding: 5px 0;
+
+    span {
+      color: $myBlue;
+      font-weight: bold;
+    }
+  }
+}
+
+.sites {
+  padding: $spaceBottomTitle;
+
+  img {
+    margin-right: $spaceDefault;
+
+    @include d(m) {
+      margin-right: 0;
+      margin-top: $spaceDefault;
+    }
+  }
+}
+
+.system {
+  img {
+    margin-left: $spaceDefault;
+
+    @include d(m) {
+      margin-left: 0;
+      margin-top: $spaceDefault;
+    }
+  }
+}
+
+// fecha servicos
+
 /* conteudo parallax */
 .box-container {
   background: url("./../img/icons/back.svg") center repeat-x;
@@ -238,7 +340,8 @@ nav {
 #tecnologias {
   @include container;
   background: $colorBackgroundE;
-  padding: $spaceSections $spaceDefault;
+  padding-top: $spaceTopTitle;
+  padding-bottom: $spaceSections;
 
   div {
     visibility: hidden;
@@ -248,6 +351,13 @@ nav {
       margin: 5px;
       visibility: hidden;
     }
+  }
+
+  .imgsTecnologias {
+    padding: $spaceBottomTitle;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 
   h1 {
@@ -263,20 +373,23 @@ nav {
 // abre contatos
 .bgContatos {
   @include container;
+  padding: 0;
   background: url("./../img/icons/back.svg") $colorBackgroundE center repeat-x;
+  border-top: $borderWhite;
+  border-bottom: $borderWhite;
 }
 
 #contatos {
   @include container;
-  padding: $spaceSections $spaceDefault;
-  border-top: $borderWhite;
-  border-bottom: $borderWhite;
+  padding-top: $spaceTopTitle;
+  padding-bottom: $spaceSections;
   visibility: hidden;
 
   div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    // padding: $spaceBottomTitle;
   }
 
   img {
@@ -290,7 +403,7 @@ nav {
   }
 
   dl {
-    padding: 10px 0px;
+    padding: $spaceBottomTitle;
   }
 
   dt {
@@ -317,6 +430,7 @@ footer {
   @include container;
   text-align: center;
   @include tipo-1(16, $white);
-  padding: $spaceDefault;
+  padding: $spaceDefault 0;
   background: $colorBackgroundE;
+  border-bottom: $borderWhite;
 }
