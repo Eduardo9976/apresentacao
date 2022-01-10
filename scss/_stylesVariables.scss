@@ -113,7 +113,13 @@ sans-serif;
 
 //Media-queries
 @mixin d($dispositivo) {
-  @if $dispositivo==t {
+  @if $dispositivo==d {
+    @media (max-width: 1985px) {
+      @content;
+    }
+  }
+
+  @else if $dispositivo==t {
     @media (max-width: 959px) {
       @content;
     }
