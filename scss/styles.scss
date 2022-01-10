@@ -370,6 +370,26 @@ nav {
 }
 
 // fecha tecnologias
+
+// abre time line
+.bgtimeLine {
+  @include container;
+  padding: 0;
+  background: $colorBackgroundE;
+  border-top: $borderWhite;
+  // border-bottom: $borderWhite;
+
+  #timeLine {
+    @include container;
+    padding-top: $spaceTopTitle;
+    padding-bottom: $spaceSections;
+  }
+
+  height: 600px
+}
+
+//fecha time line
+
 // abre contatos
 .bgContatos {
   @include container;
