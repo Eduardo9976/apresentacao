@@ -111,6 +111,20 @@ sans-serif;
   }
 }
 
+@mixin timeLineR {
+  &::before {
+    border-left: none;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid rgba(255, 255, 255, 0.3);
+    left: -5px;
+  }
+
+  &::after {
+    left: -30px;
+  }
+}
+
 //Media-queries
 @mixin d($dispositivo) {
   @if $dispositivo==d {

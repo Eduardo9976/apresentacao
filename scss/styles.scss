@@ -383,9 +383,115 @@ nav {
     @include container;
     padding-top: $spaceTopTitle;
     padding-bottom: $spaceSections;
+    visibility: hidden;
   }
 
-  height: 600px
+  .timeLineContainer {
+    width: min-content;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-areas: "opt1 divisor ."
+      ". divisor opt2"
+      "opt3 divisor ."
+      ". divisor opt4";
+    column-gap: 20px;
+    row-gap: 40px;
+
+    @include d(m) {
+      grid-template-columns: repeat(2, min-content);
+      grid-template-areas: "divisor opt1"
+        "divisor opt2"
+        "divisor opt3"
+        "divisor opt4";
+    }
+
+    p {
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 150px;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.1);
+      user-select: none;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $myBlue;
+        border: 2px solid #fff;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    p:nth-child(odd) {
+      &::before {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid rgba(255, 255, 255, 0.3);
+        right: -5px;
+      }
+
+      &::after {
+        right: -30px;
+      }
+
+      @include d(m) {
+        @include timeLineR;
+      }
+    }
+
+    p:nth-child(even) {
+      @include timeLineR;
+    }
+
+    p:nth-child(1) {
+      margin-top: 30px;
+    }
+
+    p:nth-child(4) {
+      margin-bottom: 30px;
+    }
+
+    .opt1 {
+      grid-area: opt1;
+    }
+
+    .opt2 {
+      grid-area: opt2;
+    }
+
+    .opt3 {
+      grid-area: opt3;
+    }
+
+    .opt4 {
+      grid-area: opt4;
+    }
+
+    .divisor {
+      grid-area: divisor;
+      width: 5px;
+      border-radius: 8px;
+      background: $myBlue;
+    }
+  }
 }
 
 //fecha time line
