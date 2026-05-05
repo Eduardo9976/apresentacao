@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Eduardo Fernandes — Desenvolvedor Web especializado em sistemas web, sites responsivos e landing pages. Entre em contato e comece a sua solução digital.">
+  <meta property="og:title" content="Eduardo Fernandes — Desenvolvedor Web">
+  <meta property="og:description"
+    content="Sistemas web, sites responsivos e landing pages para alavancar o seu negócio.">
+  <meta property="og:type" content="website">
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Red+Hat+Display:ital,wght@1,700&display=swap"
     rel="stylesheet">
@@ -11,17 +17,19 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" type="imagem/x-icon" href="./img/icones/icone@2x.png" />
-  <title>Eduardo Fernandes</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/icones/icone@2x.png" />
+  <title>Eduardo Fernandes — Desenvolvedor Web</title>
 </head>
 
 <body>
 
-  <nav>
-    <img src="./img/LogoEduardo.png" alt="Logo">
+  <nav aria-label="Navegação principal">
+    <img src="./img/LogoEduardo.png" alt="Logo Eduardo Fernandes">
     <div>
-      <i class="fa fa-bars" aria-hidden="true"></i>
-      <ul>
+      <button id="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-list">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul id="nav-list" role="list">
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#tecnologias">Tecnologias</a></li>
         <li><a href="#contatos" class="Mmain">Contatos</a></li>
@@ -29,163 +37,166 @@
     </div>
   </nav>
 
-  <div class="parallax">
+  <section class="parallax" aria-label="Apresentação">
     <div class="box-parallax">
       <div class="box-main animate__animated animate__zoomInUp">
-        <img src="./img/local/EE34.png" width="120" alt="foto Eduardo"
+        <img src="./img/local/EE34.png" width="120" alt="Foto de Eduardo Fernandes"
           class="sociais-main animate__animated animate__backInLeft animate__delay-1s">
         <div>
           <p class="animate__animated animate__backInLeft animate__delay-2s">
-            < Seja bem vindo, eu sou</p>
-              <h1 class="animate__animated animate__backInLeft animate__delay-1s">Eduardo Fernandes</h1>
-              <p class="animate__animated animate__backInLeft animate__delay-2s">Desenvolvedor Web /> </p>
+            Seja bem-vindo, eu sou
+          </p>
+          <h1 class="animate__animated animate__backInLeft animate__delay-1s">Eduardo Fernandes</h1>
+          <p class="animate__animated animate__backInLeft animate__delay-2s">Desenvolvedor Web</p>
         </div>
         <div class="box-sociais">
           <p class="animate__animated animate__backInLeft animate__delay-1s">Desenvolvimento de sistemas Web,
             Desenvolvimento de sites responsivos e Montagem de Landing Pages, para obter informações <a
               href="#contatos">entre em contato.</a></p>
           <div class="sociais-main animate__animated animate__backInLeft animate__delay-2s">
-            <a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a>
-            <a href=" https://api.whatsapp.com/send?phone=5511992623645" target="_blank"><i
-                class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/eduardo_fernandes75/" target="_blank"><i
-                class="fab fa-instagram"></i></a>
-            <a href="mailto:eduardo_2407@me.com"><i class="far fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn de Eduardo Fernandes"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5511992623645" target="_blank" rel="noopener noreferrer"
+              aria-label="WhatsApp de Eduardo Fernandes"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/eduardo_fernandes75/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram de Eduardo Fernandes"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="mailto:eduardo_2407@me.com" aria-label="E-mail de Eduardo Fernandes"><i class="far fa-envelope"
+                aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="box-container">
-    <div id="servicos">
+  <section id="servicos" class="box-container">
 
-      <h1>Conheça os Serviços oferecidos!</h1>
-      <p>Serviços e soluções Web completas para a sua empresa, vamos bater um papo e começar a criar uma solução para
-        sanar os seus problemas e alavancar os seus negócios.</p>
+    <h2>Conheça os Serviços oferecidos!</h2>
+    <p>Serviços e soluções Web completas para a sua empresa, vamos bater um papo e começar a criar uma solução para
+      sanar os seus problemas e alavancar os seus negócios.</p>
 
-      <div class="sites">
-        <img src="./img/icons/sites.png" alt="foto Eduardo">
-        <div>
-          <div class="descriptions">
-            <h3>Sites</h3>
-            <p>Voltado para quem deseja dar presença digital ao seu negócio e alavancar as suas vendas, reunindo
-              informações e consolidando a identidade visual da marca num canal fundamental de contato com o público.
-            </p>
-          </div>
-          <dl>
-            <div>
-              <dt>Vantagens</dt>
-              <dd><span>Exclusividade - </span>Permite que você tenha um domínio próprio na Internet, ajudando a criar
-                uma identidade visual e conceito da sua marca, todas as informações cadastradas nele ficarão acessíveis
-                por tempo indeterminado.</dd>
-              <dd><span>Relacionamento com os clientes - </span>Outra vantagem desta ferramenta é que com ela é possível
-                criar conteúdos que eduquem e esclareçam as dúvidas do seu público-alvo, e isso mostra que as pessoas
-                podem confiar na sua marca, além de gerar oportunidades de engajamento e captar novos clientes.</dd>
-              <dd><span>Aumento das vendas - </span>Devido a sua enorme abrangência, o site torna-se uma ótima vitrine
-                virtual. É possível expor seus produtos em qualquer lugar do mundo. Estar online 24h por dia dá a
-                oportunidade para que os potenciais clientes tomem decisões favoráveis ao seu negócio quando preferirem.
-              </dd>
-            </div>
-          </dl>
+    <article class="sites">
+      <img src="./img/icons/sites.png" alt="Ícone de sites">
+      <div>
+        <div class="descriptions">
+          <h3>Sites</h3>
+          <p>Voltado para quem deseja dar presença digital ao seu negócio e alavancar as suas vendas, reunindo
+            informações e consolidando a identidade visual da marca num canal fundamental de contato com o público.
+          </p>
         </div>
-      </div>
-
-      <div class="system">
-        <div>
+        <dl>
           <div class="descriptions">
-            <h3>Sistemas</h3>
-            <p>Consiste na criação de uma solução online personalizada para automatizar os processos internos da sua
-              organização, otimizando a sua gestão em tempo e dinheiro investidos.</p>
+            <dt>Vantagens</dt>
+            <dd><span>Exclusividade — </span>Permite que você tenha um domínio próprio na Internet, ajudando a criar
+              uma identidade visual e conceito da sua marca, todas as informações cadastradas nele ficarão acessíveis
+              por tempo indeterminado.</dd>
+            <dd><span>Relacionamento com os clientes — </span>Outra vantagem desta ferramenta é que com ela é possível
+              criar conteúdos que eduquem e esclareçam as dúvidas do seu público-alvo, e isso mostra que as pessoas
+              podem confiar na sua marca, além de gerar oportunidades de engajamento e captar novos clientes.</dd>
+            <dd><span>Aumento das vendas — </span>Devido a sua enorme abrangência, o site torna-se uma ótima vitrine
+              virtual. É possível expor seus produtos em qualquer lugar do mundo. Estar online 24h por dia dá a
+              oportunidade para que os potenciais clientes tomem decisões favoráveis ao seu negócio quando preferirem.
+            </dd>
           </div>
-          <dl>
-            <div>
-              <dt>Vantagens</dt>
-              <dd><span>Integração - </span>Para uma empresa se manter organizada é necessário que a informação seja
-                repassada entre todos os setores de maneira rápida e livre de erros, com um sistema, os dados irão
-                trafegar livremente pela empresa, possibilitando o controle das informações.</dd>
-              <dd><span>Controle - </span>Quando a empresa não consegue adquirir controle total dos seus processos, ela
-                está sujeita ao fracasso, para evitar essa situação a coisa certa a ser feita é o monitoramento, o
-                controle é uma grande vantagem de um sistema, pois facilita que o gestor encontre falhas com mais
-                precisão e as corrija mais rápido.</dd>
-              <dd><span>Produtividade - </span>O grande benefício do sistema é o aumento na produtividade, todos os
-                processos se tornam mais enxutos, além de garantir um aumento na capacidade de produção e reduzir
-                custos.</dd>
-            </div>
-          </dl>
-        </div>
-        <img src="./img/icons/sistemas.png" alt="foto Eduardo">
+        </dl>
       </div>
+    </article>
 
-    </div>
-  </div>
+    <article class="system">
+      <div>
+        <div class="descriptions">
+          <h3>Sistemas</h3>
+          <p>Consiste na criação de uma solução online personalizada para automatizar os processos internos da sua
+            organização, otimizando a sua gestão em tempo e dinheiro investidos.</p>
+        </div>
+        <dl>
+          <div class="descriptions">
+            <dt>Vantagens</dt>
+            <dd><span>Integração — </span>Para uma empresa se manter organizada é necessário que a informação seja
+              repassada entre todos os setores de maneira rápida e livre de erros, com um sistema, os dados irão
+              trafegar livremente pela empresa, possibilitando o controle das informações.</dd>
+            <dd><span>Controle — </span>Quando a empresa não consegue adquirir controle total dos seus processos, ela
+              está sujeita ao fracasso, para evitar essa situação a coisa certa a ser feita é o monitoramento, o
+              controle é uma grande vantagem de um sistema, pois facilita que o gestor encontre falhas com mais
+              precisão e as corrija mais rápido.</dd>
+            <dd><span>Produtividade — </span>O grande benefício do sistema é o aumento na produtividade, todos os
+              processos se tornam mais enxutos, além de garantir um aumento na capacidade de produção e reduzir
+              custos.</dd>
+          </div>
+        </dl>
+      </div>
+      <img src="./img/icons/sistemas.png" alt="Ícone de sistemas">
+    </article>
 
-  <div class="parallax">
-    <div id="tecnologias">
-      <h1 class="animate__animated"> Tecnologias</h1>
+  </section>
+
+  <div class="parallax-wrapper">
+    <section id="tecnologias">
+      <h2 class="animate__animated">Tecnologias</h2>
       <p class="animate__animated">Com os acessórios certos você evita desperdícios e garante os melhores resultados!
       </p>
       <p class="animate__animated">E com esse pensamento de entregar serviços de qualidade e sempre com os melhores
-        resultados, em meus trabalhos costumos usar as seguintes tecnologias para o BACK-END e o FRONT-END. </p>
+        resultados, em meus trabalhos costumo usar as seguintes tecnologias para o BACK-END e o FRONT-END.</p>
       <div class="imgsTecnologias">
-        <img src="./img/icons/bootstrap.png" alt="logo bootstrap" class="animate__animated  animate__delay-1s">
-        <img src="./img/icons/css3.png" alt="logo css" class="animate__animated  animate__delay-1s">
-        <img src="./img/icons/express.png" alt="logo express" class="animate__animated  animate__delay-1s">
-        <img src="./img/icons/graphql.png" alt="logo graphql" class="animate__animated  animate__delay-2s">
-        <img src="./img/icons/html5.png" alt="logo html" class="animate__animated  animate__delay-2s">
-        <img src="./img/icons/javascript.png" alt="logo javascript" class="animate__animated  animate__delay-2s">
-        <img src="./img/icons/jest.png" alt="logo jest" class="animate__animated  animate__delay-3s">
-        <img src="./img/icons/nodejs.png" alt="logo node" class="animate__animated  animate__delay-3s">
-        <img src="./img/icons/sass.png" alt="logo sass" class="animate__animated  animate__delay-3s">
-        <img src="./img/icons/vue.png" alt="logo vue" class="animate__animated  animate__delay-4s">
-        <img src="./img/icons/vuetify.png" alt="logo vuetify" class="animate__animated  animate__delay-4s">
+        <img src="./img/icons/bootstrap.png" alt="Logo Bootstrap" class="animate__animated animate__delay-1s">
+        <img src="./img/icons/css3.png" alt="Logo CSS3" class="animate__animated animate__delay-1s">
+        <img src="./img/icons/express.png" alt="Logo Express" class="animate__animated animate__delay-1s">
+        <img src="./img/icons/graphql.png" alt="Logo GraphQL" class="animate__animated animate__delay-2s">
+        <img src="./img/icons/html5.png" alt="Logo HTML5" class="animate__animated animate__delay-2s">
+        <img src="./img/icons/javascript.png" alt="Logo JavaScript" class="animate__animated animate__delay-2s">
+        <img src="./img/icons/jest.png" alt="Logo Jest" class="animate__animated animate__delay-3s">
+        <img src="./img/icons/nodejs.png" alt="Logo Node.js" class="animate__animated animate__delay-3s">
+        <img src="./img/icons/sass.png" alt="Logo Sass" class="animate__animated animate__delay-3s">
+        <img src="./img/icons/vue.png" alt="Logo Vue.js" class="animate__animated animate__delay-4s">
+        <img src="./img/icons/vuetify.png" alt="Logo Vuetify" class="animate__animated animate__delay-4s">
       </div>
-    </div>
+    </section>
 
     <div class="bgtimeLine">
-      <div id="timeLine">
-        <h1>Caminho das pedras</h1>
+      <section id="timeLine">
+        <h2>Caminho das pedras</h2>
         <p>Simples e objetivo!</p>
-        <p>Comprometa-se com suas metas e encare os obstáculos como etapas para atingir o objetivo final; Aqui é tudo sem muita enrolação, veja como pode ser simples contratar os meus serviços.</p>
+        <p>Comprometa-se com suas metas e encare os obstáculos como etapas para atingir o objetivo final; Aqui é tudo
+          sem muita enrolação, veja como pode ser simples contratar os meus serviços.</p>
 
-        <div class="timeLineContainer">
-          <p class="opt1">Solicitação de contato.</p>
-          <p class="opt2">Análise de Necessidades.</p>
-          <p class="opt3">Apresentação de possíveis soluções.</p>
-          <p class="opt4">Nossa parceria de confiança e sucesso já está garantida.</p>
-          <div class="divisor"></div>
+        <div class="timeLineContainer" role="list">
+          <div class="opt1" role="listitem">Solicitação de contato.</div>
+          <div class="opt2" role="listitem">Análise de Necessidades.</div>
+          <div class="opt3" role="listitem">Apresentação de possíveis soluções.</div>
+          <div class="opt4" role="listitem">Nossa parceria de confiança e sucesso já está garantida.</div>
+          <div class="divisor" aria-hidden="true"></div>
         </div>
-      </div>
+      </section>
     </div>
 
     <div class="bgContatos">
-      <div id="contatos">
-        <h1>Contatos</h1>
+      <section id="contatos">
+        <h2>Contatos</h2>
         <p>Dúvidas?</p>
         <p>Se você gostaria de obter informações sobre meus serviços, precisa de detalhes ou tem dúvidas sobre qual é a
           melhor alternativa para sua empresa, não hesite em entrar em contato, estou disponível para atendê-lo o mais
           breve possível!</p>
         <p>Entre em contato diretamente comigo e garanta uma parceria de confiança e sucesso.</p>
-        <div>
+        <div class="contentContacts">
           <dl>
-            <dt> <i class="fab fa-linkedin-in"></i> Linkedin:</dt>
-            <dd> <a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank"> eduardo-fernandes
-              </a> </dd>
-            <dt> <i class="fab fa-whatsapp"></i> Whatsapp:</dt>
-            <dd> <a href=" https://api.whatsapp.com/send?phone=5511992623645" target="_blank"> 11 99262-3645 </a> </dd>
-            <dt> <i class="fab fa-instagram"></i> Instagram: </dt>
-            <dd> <a href="https://www.instagram.com/eduardo_fernandes75/" target="_blank"> eduardo_fernandes75</a> </dd>
-            <dt> <i class="far fa-envelope"></i> Email: </dt>
-            <dd> <a href="mailto:eduardo_2407@me.com"> eduardo_2407@me.com </a> </dd>
+            <dt><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn:</dt>
+            <dd><a href="https://www.linkedin.com/in/eduardo-fernandes-66924289/" target="_blank"
+                rel="noopener noreferrer">eduardo-fernandes</a></dd>
+            <dt><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp:</dt>
+            <dd><a href="https://api.whatsapp.com/send?phone=5511992623645" target="_blank" rel="noopener noreferrer">11
+                99262-3645</a></dd>
+            <dt><i class="fab fa-instagram" aria-hidden="true"></i> Instagram:</dt>
+            <dd><a href="https://www.instagram.com/eduardo_fernandes75/" target="_blank"
+                rel="noopener noreferrer">eduardo_fernandes75</a></dd>
+            <dt><i class="far fa-envelope" aria-hidden="true"></i> E-mail:</dt>
+            <dd><a href="mailto:eduardo_2407@me.com">eduardo_2407@me.com</a></dd>
           </dl>
-          <img src="./img/icons/FotoEu2x.png" alt="foto Eduardo">
+          <img src="./img/icons/FotoEu2x.png" alt="Foto de Eduardo Fernandes">
         </div>
-      </div>
+      </section>
     </div>
+
     <footer>
-      <div>
-        <p>©Eduardo Fernandes 2020</p>
+      <p>© Eduardo Fernandes 2020</p>
     </footer>
 
   </div>

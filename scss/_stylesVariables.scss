@@ -3,21 +3,28 @@ $white: #fff;
 $colorBackgroundE: rgba(0, 0, 0, .8);
 $colorBackgroundC: rgba(0, 0, 0, .4);
 $colorBoxShadowE: 3px 4px 4px 2px rgba(0, 0, 0, .2),
-4px 6px 8px 2px rgba(0, 0, 0, .4);
+  4px 6px 8px 2px rgba(0, 0, 0, .4);
 $colorBoxShadowC: 0 2px 4px 0 rgba(0, 0, 0, .05),
-0 4px 8px 0 rgba(0, 0, 0, .05);
+  0 4px 8px 0 rgba(0, 0, 0, .05);
 $border: 2px solid $myBlue;
 $borderWhite: 2px solid #FFF;
-$spaceDefault: 10px;
-$spaceSections: 60px;
-$spaceTopTitle: 20px;
-$spaceBottomTitle: 40px 0px;
+$spaceDefault: 12px;
+$spaceSmall: 8px;
+$spaceMedium: 24px;
+$spaceLarge: 48px;
+$spaceHuge: 80px;
+
+$min-touch-target: 44px;
+$spaceSections: 80px;
+$spaceSectionsMobile: 48px;
+$spaceTopTitle: 32px;
+$spaceBottomTitle: 0 0 32px 0;
 
 
 $fonte-1: 'Open Sans',
-sans-serif;
+  sans-serif;
 $fonte-2: 'Red Hat Display',
-sans-serif;
+  sans-serif;
 
 
 @function em($pixel, $contexto: 16) {
@@ -31,7 +38,7 @@ sans-serif;
 }
 
 
-@mixin flex($position, $wrap:nowrap) {
+@mixin flex($position, $wrap: nowrap) {
   display: flex;
 
   @if $position==s {

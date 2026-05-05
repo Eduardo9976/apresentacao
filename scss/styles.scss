@@ -29,6 +29,7 @@ body {
 
 p {
   @include tipo-1(18, $white);
+  line-height: 1.6;
 }
 
 h1 {
@@ -48,7 +49,7 @@ nav {
   @include flex(c, wrap);
   justify-content: space-between !important;
   align-items: center;
-  padding: $spaceDefault !important;
+  padding: $spaceDefault 20px !important;
   box-shadow: $colorBoxShadowC;
   position: fixed;
   top: 0px;
@@ -60,6 +61,7 @@ nav {
     display: flex;
     animation: bounce 1s alternate forwards ease-in-out;
     transition: ease-in-out 1s;
+    align-items: center;
 
     @include d(t) {
       flex-direction: column;
@@ -75,12 +77,11 @@ nav {
   }
 
   li+li {
-    margin-left: 5px;
+    margin-left: $spaceMedium;
 
     @include d(t) {
       margin-left: 0;
     }
-
   }
 
   li {
@@ -102,33 +103,41 @@ nav {
   }
 
   .Mmain {
+    display: inline-flex;
+    align-items: center;
+    min-height: $min-touch-target;
+    padding: 0 $spaceMedium;
     background: $myBlue;
     border: $border;
     border-radius: 4px;
     transition: all .5s;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       background: transparent;
       color: $white
     }
   }
 
-  .fa-bars {
-    width: 54px;
-    padding: $spaceDefault;
+  #btn-menu {
+    display: none;
+    min-width: $min-touch-target;
+    min-height: $min-touch-target;
+    padding: $spaceSmall;
     font-size: 1.6em;
     border-radius: 4px;
     background: $myBlue;
     color: $white;
     border: 1px solid $white;
     text-align: center;
-    visibility: hidden;
     cursor: pointer;
     transition: ease-in-out 1s;
+    align-items: center;
+    justify-content: center;
 
     @include d(t) {
-      visibility: visible;
+      display: inline-flex;
+      margin-right: $spaceDefault;
     }
   }
 
@@ -180,25 +189,45 @@ nav {
 
 // abre servicos
 #servicos {
-  padding-top: $spaceTopTitle;
-  padding-bottom: $spaceSections;
+  padding-top: $spaceLarge;
+  padding-bottom: $spaceHuge;
   visibility: hidden;
+
+  h2 {
+    color: white;
+    margin-bottom: $spaceMedium;
+  }
+
+  @include d(m) {
+    padding-top: $spaceSectionsMobile;
+    padding-bottom: $spaceSectionsMobile;
+  }
 }
 
 .descriptions {
   background: $colorBackgroundC;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 1px 1px 0px 2px rgba(0, 0, 0, 0.2);
-  padding: $spaceDefault;
+  padding: $spaceMedium;
   border-radius: 4px;
+
+  h3 {
+    margin-bottom: $spaceDefault;
+  }
 }
 
 .sites,
 .system {
   @include flex(c, wrap);
   align-items: center;
+  margin-bottom: $spaceHuge;
 
   @include d(m) {
     flex-direction: column;
+    margin-bottom: $spaceLarge;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   div {
@@ -206,6 +235,7 @@ nav {
 
     @include d(m) {
       flex: 1;
+      padding: 0 $spaceSmall;
     }
   }
 
@@ -214,20 +244,19 @@ nav {
 
     @include d(m) {
       order: 2;
+      margin-top: $spaceLarge;
     }
   }
 
   dl {
-    background: $colorBackgroundC;
-    margin-top: $spaceDefault;
-    padding: 0 $spaceDefault;
+    margin-top: $spaceMedium;
     border-radius: 4px;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 1px 1px 0px 2px rgba(0, 0, 0, 0.2);
   }
 
   dt {
     @include tipo-2(24, $myBlue);
-    padding: $spaceDefault 0;
+    padding: $spaceSmall 0;
   }
 
   dt::after {
@@ -236,11 +265,12 @@ nav {
     width: 120px;
     height: 2px;
     background: $myBlue;
+    margin-top: $spaceSmall;
   }
 
   dd {
     @include tipo-1(18, $white);
-    padding: 5px 0;
+    padding: $spaceSmall 0;
 
     span {
       color: $myBlue;
@@ -289,13 +319,18 @@ nav {
 }
 
 .box-main {
-  max-width: 600px;
+  max-width: 700px;
   @include flex(c, wrap);
   align-items: center;
   background: $colorBackgroundE;
-  padding: $spaceDefault;
-  border-radius: 4px;
+  padding: $spaceLarge;
+  border-radius: 8px;
   box-shadow: $colorBoxShadowE;
+
+  @include d(m) {
+    padding: $spaceMedium;
+    margin: 0 $spaceDefault;
+  }
 
   div {
     margin: $spaceDefault;
@@ -303,17 +338,30 @@ nav {
 }
 
 .box-sociais {
-  padding-top: $spaceDefault;
+  padding-top: $spaceMedium;
   width: 100%;
+
+  p {
+    margin-bottom: $spaceMedium;
+  }
 
   a {
     color: $myBlue;
     border-bottom: $border;
     text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
 .sociais-main a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
   border: none;
   color: $white;
   font-size: em(26);
@@ -324,7 +372,7 @@ nav {
 }
 
 .sociais-main a+a {
-  margin-left: $spaceDefault;
+  margin-left: $spaceMedium;
 }
 
 /* fecha conteudo parallax */
@@ -340,24 +388,44 @@ nav {
 #tecnologias {
   @include container;
   background: $colorBackgroundE;
-  padding-top: $spaceTopTitle;
-  padding-bottom: $spaceSections;
+  padding: $spaceMedium;
+
+  h2 {
+    margin-bottom: $spaceDefault;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto $spaceDefault;
+    text-align: center;
+  }
+
+  @include d(m) {
+    padding-top: $spaceSectionsMobile;
+    padding-bottom: $spaceSectionsMobile;
+  }
 
   div {
     visibility: hidden;
     @include flex(c, wrap);
 
     img {
-      margin: 5px;
+      margin: $spaceDefault;
       visibility: hidden;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
   .imgsTecnologias {
-    padding: $spaceBottomTitle;
+    padding-top: $spaceLarge;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
+    gap: $spaceMedium;
   }
 
   h1 {
@@ -374,16 +442,25 @@ nav {
 // abre time line
 .bgtimeLine {
   @include container;
-  padding: 0;
+  padding: 24px;
   background: $colorBackgroundE;
   border-top: $borderWhite;
   // border-bottom: $borderWhite;
 
   #timeLine {
     @include container;
-    padding-top: $spaceTopTitle;
-    padding-bottom: $spaceSections;
+    padding-top: $spaceLarge;
+    padding-bottom: $spaceHuge;
     visibility: hidden;
+
+    h2 {
+      margin-bottom: $spaceDefault;
+    }
+
+    @include d(m) {
+      padding-top: $spaceSectionsMobile;
+      padding-bottom: $spaceSectionsMobile;
+    }
   }
 
   .timeLineContainer {
@@ -391,6 +468,7 @@ nav {
     margin: 0 auto;
     padding: 30px 0;
     display: grid;
+    list-style: none;
     grid-template-columns: repeat(3, min-content);
     grid-template-areas: "opt1 divisor ."
       ". divisor opt2"
@@ -407,7 +485,7 @@ nav {
         "divisor opt4";
     }
 
-    p {
+    div {
       padding: 10px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       width: 150px;
@@ -415,6 +493,10 @@ nav {
       position: relative;
       box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.1);
       user-select: none;
+      font-family: $fonte-1;
+      color: $white;
+      font-size: em(18);
+      line-height: em(30, 18);
 
       &::before {
         content: '';
@@ -440,7 +522,7 @@ nav {
       }
     }
 
-    p:nth-child(odd) {
+    div[role="listitem"]:nth-child(odd) {
       &::before {
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
@@ -457,15 +539,15 @@ nav {
       }
     }
 
-    p:nth-child(even) {
+    div[role="listitem"]:nth-child(even) {
       @include timeLineR;
     }
 
-    p:nth-child(1) {
+    div[role="listitem"]:nth-child(1) {
       margin-top: 30px;
     }
 
-    p:nth-child(4) {
+    div[role="listitem"]:nth-child(4) {
       margin-bottom: 30px;
     }
 
@@ -490,6 +572,12 @@ nav {
       width: 5px;
       border-radius: 8px;
       background: $myBlue;
+      padding: 0;
+
+      &::before,
+      &::after {
+        display: none
+      }
     }
   }
 }
@@ -499,7 +587,7 @@ nav {
 // abre contatos
 .bgContatos {
   @include container;
-  padding: 0;
+  padding: $spaceMedium;
   background: url("./../img/icons/back.svg") $colorBackgroundE center repeat-x;
   border-top: $borderWhite;
   border-bottom: $borderWhite;
@@ -507,20 +595,31 @@ nav {
 
 #contatos {
   @include container;
-  padding-top: $spaceTopTitle;
-  padding-bottom: $spaceSections;
+  padding-top: $spaceLarge;
+  padding-bottom: $spaceHuge;
   visibility: hidden;
+
+  h2 {
+    margin-bottom: $spaceDefault;
+  }
+
+  @include d(m) {
+    padding-top: $spaceSectionsMobile;
+    padding-bottom: $spaceSectionsMobile;
+  }
 
   div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    // padding: $spaceBottomTitle;
+  }
+
+  .contentContacts {
+    padding: $spaceLarge $spaceDefault;
   }
 
   img {
-    max-width: 280px;
-    height: auto;
+    width: 280px;
 
     @include d(m) {
       margin: 0 auto;
@@ -528,17 +627,24 @@ nav {
   }
 
   dl {
-    padding: $spaceBottomTitle;
+    @include d(m) {
+      padding: $spaceMedium 0;
+    }
   }
 
   dt {
     color: $white;
     @include tipo-2(24, $white);
+    margin-bottom: $spaceSmall;
   }
 
   dd {
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: $spaceMedium;
+    margin-bottom: $spaceLarge;
+
+    @include d(m) {
+      margin-bottom: $spaceMedium;
+    }
   }
 
   a {
